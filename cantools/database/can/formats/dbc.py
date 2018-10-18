@@ -618,7 +618,7 @@ def _load_attributes(tokens, definitions):
         definition = definitions[attribute[1]]
 
         if definition.type_name in ['INT', 'HEX', 'ENUM']:
-            value = int(value)
+            value = int(float(value))
         elif definition.type_name == 'FLOAT':
             value = Decimal(value)
 
