@@ -237,7 +237,7 @@ class Parser(textparser.Parser):
             'STRING',
             'WORD',
             #choice(DelimitedList('STRING'), OneOrMore('NUMBER')),
-            Optional(choice(ZeroOrMore('STRING'), ZeroOrMore('NUMBER'))),
+            Optional(choice(DelimitedList('STRING'), ZeroOrMore('NUMBER'))),
             ';')
 
         attribute_definition_default_rel = Sequence(
